@@ -1,0 +1,261 @@
+Recorder workspace retained until ephemeral CI runner disposal; no native runtime/model cleanup is attempted.
+
+### CMD: python --version
+Python 3.12.10
+### EXIT: 0
+
+### CMD: python -m unittest -v test_local_try
+test_generate_payload (test_local_try.API.test_generate_payload) ... ok
+test_json_error (test_local_try.API.test_json_error) ... ok
+test_local_endpoint_and_proxy_disabled (test_local_try.API.test_local_endpoint_and_proxy_disabled) ... ok
+test_nonobject (test_local_try.API.test_nonobject) ... ok
+test_oversize (test_local_try.API.test_oversize) ... ok
+test_rejects_arbitrary_url (test_local_try.API.test_rejects_arbitrary_url) ... ok
+test_directory_as_binary (test_local_try.Binary.test_directory_as_binary) ... ok
+test_hardlink (test_local_try.Binary.test_hardlink) ... ok
+test_ordinary (test_local_try.Binary.test_ordinary) ... ok
+test_pipe (test_local_try.Binary.test_pipe) ... skipped 'Unix pipe unavailable'
+test_symlink_and_loop (test_local_try.Binary.test_symlink_and_loop) ... ok
+test_17_prime_calculation (test_local_try.Environment.test_17_prime_calculation) ... ok
+test_fixed_model_and_prompts (test_local_try.Environment.test_fixed_model_and_prompts) ... ok
+test_isolates_without_mutating_parent (test_local_try.Environment.test_isolates_without_mutating_parent) ... ok
+test_already_exited_untouched (test_local_try.Lifecycle.test_already_exited_untouched) ... ok
+test_confirmed_ready (test_local_try.Lifecycle.test_confirmed_ready) ... ok
+test_dead_server_stops (test_local_try.Lifecycle.test_dead_server_stops) ... ok
+test_failed_pull_stops_owned_server_and_retains_files (test_local_try.Lifecycle.test_failed_pull_stops_owned_server_and_retains_files) ... ok
+test_failed_startup_does_not_pull (test_local_try.Lifecycle.test_failed_startup_does_not_pull) ... ok
+test_force_owned_only_after_timeout (test_local_try.Lifecycle.test_force_owned_only_after_timeout) ... ok
+test_no_cloud_confirmation_no_request (test_local_try.Lifecycle.test_no_cloud_confirmation_no_request) ... ok
+test_only_owned_process_terminated (test_local_try.Lifecycle.test_only_owned_process_terminated) ... ok
+test_port_busy_refuses_before_workspace (test_local_try.Lifecycle.test_port_busy_refuses_before_workspace) ... ok
+test_usage (test_local_try.Lifecycle.test_usage) ... ok
+test_file_collision (test_local_try.Workspace.test_file_collision) ... ok
+test_linked_output (test_local_try.Workspace.test_linked_output) ... ok
+test_linked_parent (test_local_try.Workspace.test_linked_parent) ... ok
+test_new_structure (test_local_try.Workspace.test_new_structure) ... ok
+test_repeat_preserves_bytes_mtimes (test_local_try.Workspace.test_repeat_preserves_bytes_mtimes) ... ok
+test_save_never_overwrites (test_local_try.Workspace.test_save_never_overwrites) ... ok
+test_traversal (test_local_try.Workspace.test_traversal) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 0.106s
+
+OK (skipped=1)
+### EXIT: 0
+Recorder downloads official standalone Ollama v0.40.5 into its NEW temporary runtime folder. No installer or existing-profile change.
+Verified official standalone archive SHA256: 5134ce7e3bc8e94d0494721c799ec293b429450d0c52461b0ee3647dd3bb4bb7
+
+### CMD: python local_try.py FULL_PATH_TO_TRUSTED_OLLAMA_BINARY
+Created NEW local-ai-practice. Model download uses disk/network; no automatic deletion.
+Verified lesson server reports cloud disabled. Version: 0.40.5
+Downloaded local model: llama3.2:1b digest: baf6a787fdffd633537aa2eb51cfd54cb93ff08e28040095462bb63daf552878
+Question: What is the capital of France? Answer in one short sentence.
+Recorded answer: The capital of France is Paris.
+Question: Is 17 a prime number? Answer in one short sentence.
+Recorded answer: No, 17 is not a prime number because it has more than two factors (1, 17).
+Logical model-file bytes: 1321106303 (not physical allocation or total program cost)
+Answers are model output, not verified truth. 17 is prime: only 2,3,4 need testing.
+Stopped the owned server process. Files remain in local-ai-practice for your review.
+No uninstall/delete/reset ran. Child runners, OS logs/caches and other software are not a restoration guarantee.
+### EXIT: 0
+
+### CMD: python local_try.py FULL_PATH_TO_TRUSTED_OLLAMA_BINARY
+Stopped: [WinError 183] Cannot create a file when that file already exists: 'C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\lesson43-record-ghmaqj_7\\local-ai-practice'
+Partial lesson files may remain. No automatic reset or recursive deletion.
+### EXIT: 2
+Reviewer known-answer checks: True False
+### SAVED LESSON JSON
+version.json {
+  "version": "0.40.5"
+}
+
+models.json {
+  "models": [
+    {
+      "name": "llama3.2:1b",
+      "model": "llama3.2:1b",
+      "modified_at": "2026-10-16T20:54:35.3467553Z",
+      "size": 1321098329,
+      "digest": "baf6a787fdffd633537aa2eb51cfd54cb93ff08e28040095462bb63daf552878",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "llama",
+        "families": [
+          "llama"
+        ],
+        "parameter_size": "1.2B",
+        "quantization_level": "Q8_0",
+        "context_length": 131072,
+        "embedding_length": 2048,
+        "runner": "ggml"
+      },
+      "capabilities": [
+        "completion",
+        "tools"
+      ]
+    }
+  ]
+}
+
+memory.json {
+  "models": [
+    {
+      "name": "llama3.2:1b",
+      "model": "llama3.2:1b",
+      "size": 1454291025,
+      "digest": "baf6a787fdffd633537aa2eb51cfd54cb93ff08e28040095462bb63daf552878",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "llama",
+        "families": [
+          "llama"
+        ],
+        "parameter_size": "1.2B",
+        "quantization_level": "Q8_0"
+      },
+      "expires_at": "2026-10-16T20:55:41.7837507Z",
+      "size_vram": 0,
+      "context_length": 2048,
+      "runner": "llamacpp"
+    }
+  ]
+}
+
+answer1.json {
+  "model": "llama3.2:1b",
+  "created_at": "2026-10-16T20:54:39.3731668Z",
+  "response": "The capital of France is Paris.",
+  "done": true,
+  "done_reason": "stop",
+  "context": [
+    128006,
+    9125,
+    128007,
+    271,
+    38766,
+    1303,
+    33025,
+    2696,
+    25,
+    6790,
+    220,
+    2366,
+    18,
+    271,
+    128009,
+    128006,
+    882,
+    128007,
+    271,
+    3923,
+    374,
+    279,
+    6864,
+    315,
+    9822,
+    30,
+    22559,
+    304,
+    832,
+    2875,
+    11914,
+    13,
+    128009,
+    128006,
+    78191,
+    128007,
+    271,
+    791,
+    6864,
+    315,
+    9822,
+    374,
+    12366,
+    13
+  ],
+  "total_duration": 3625607400,
+  "load_duration": 1655035200,
+  "prompt_eval_count": 38,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 1370971000,
+  "eval_count": 8,
+  "eval_duration": 593474000
+}
+
+answer2.json {
+  "model": "llama3.2:1b",
+  "created_at": "2026-10-16T20:54:41.7815924Z",
+  "response": "No, 17 is not a prime number because it has more than two factors (1, 17).",
+  "done": true,
+  "done_reason": "stop",
+  "context": [
+    128006,
+    9125,
+    128007,
+    271,
+    38766,
+    1303,
+    33025,
+    2696,
+    25,
+    6790,
+    220,
+    2366,
+    18,
+    271,
+    128009,
+    128006,
+    882,
+    128007,
+    271,
+    3957,
+    220,
+    1114,
+    264,
+    10461,
+    1396,
+    30,
+    22559,
+    304,
+    832,
+    2875,
+    11914,
+    13,
+    128009,
+    128006,
+    78191,
+    128007,
+    271,
+    2822,
+    11,
+    220,
+    1114,
+    374,
+    539,
+    264,
+    10461,
+    1396,
+    1606,
+    433,
+    706,
+    810,
+    1109,
+    1403,
+    9547,
+    320,
+    16,
+    11,
+    220,
+    1114,
+    570
+  ],
+  "total_duration": 2139983300,
+  "load_duration": 6895200,
+  "prompt_eval_count": 38,
+  "prompt_eval_cached_count": 20,
+  "prompt_eval_duration": 625756000,
+  "eval_count": 23,
+  "eval_duration": 1501719000
+}
