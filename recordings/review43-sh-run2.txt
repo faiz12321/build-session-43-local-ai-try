@@ -1,0 +1,45 @@
+Recorder workspace retained until ephemeral CI runner disposal; no native runtime/model cleanup is attempted.
+
+### CMD: python --version
+Python 3.12.3
+### EXIT: 0
+
+### CMD: python -m unittest -v test_local_try
+test_generate_payload (test_local_try.API.test_generate_payload) ... ok
+test_json_error (test_local_try.API.test_json_error) ... ok
+test_local_endpoint_and_proxy_disabled (test_local_try.API.test_local_endpoint_and_proxy_disabled) ... ok
+test_nonobject (test_local_try.API.test_nonobject) ... ok
+test_oversize (test_local_try.API.test_oversize) ... ok
+test_rejects_arbitrary_url (test_local_try.API.test_rejects_arbitrary_url) ... ok
+test_directory_as_binary (test_local_try.Binary.test_directory_as_binary) ... ok
+test_hardlink (test_local_try.Binary.test_hardlink) ... ok
+test_ordinary (test_local_try.Binary.test_ordinary) ... ok
+test_pipe (test_local_try.Binary.test_pipe) ... ok
+test_symlink_and_loop (test_local_try.Binary.test_symlink_and_loop) ... ok
+test_17_prime_calculation (test_local_try.Environment.test_17_prime_calculation) ... ok
+test_fixed_model_and_prompts (test_local_try.Environment.test_fixed_model_and_prompts) ... ok
+test_isolates_without_mutating_parent (test_local_try.Environment.test_isolates_without_mutating_parent) ... ok
+test_already_exited_untouched (test_local_try.Lifecycle.test_already_exited_untouched) ... ok
+test_confirmed_ready (test_local_try.Lifecycle.test_confirmed_ready) ... ok
+test_dead_server_stops (test_local_try.Lifecycle.test_dead_server_stops) ... ok
+test_failed_pull_stops_owned_server_and_retains_files (test_local_try.Lifecycle.test_failed_pull_stops_owned_server_and_retains_files) ... ok
+test_failed_startup_does_not_pull (test_local_try.Lifecycle.test_failed_startup_does_not_pull) ... ok
+test_force_owned_only_after_timeout (test_local_try.Lifecycle.test_force_owned_only_after_timeout) ... ok
+test_no_cloud_confirmation_no_request (test_local_try.Lifecycle.test_no_cloud_confirmation_no_request) ... ok
+test_only_owned_process_terminated (test_local_try.Lifecycle.test_only_owned_process_terminated) ... ok
+test_port_busy_refuses_before_workspace (test_local_try.Lifecycle.test_port_busy_refuses_before_workspace) ... ok
+test_usage (test_local_try.Lifecycle.test_usage) ... ok
+test_file_collision (test_local_try.Workspace.test_file_collision) ... ok
+test_linked_output (test_local_try.Workspace.test_linked_output) ... ok
+test_linked_parent (test_local_try.Workspace.test_linked_parent) ... ok
+test_new_structure (test_local_try.Workspace.test_new_structure) ... ok
+test_repeat_preserves_bytes_mtimes (test_local_try.Workspace.test_repeat_preserves_bytes_mtimes) ... ok
+test_save_never_overwrites (test_local_try.Workspace.test_save_never_overwrites) ... ok
+test_traversal (test_local_try.Workspace.test_traversal) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 0.021s
+
+OK
+### EXIT: 0
+Linux:31mock/filesystemtests only. No native Ollama inference or hardware/privacy claim.
